@@ -1,0 +1,35 @@
+create database if not exists sample collate utf8_bin;
+
+USE sample;
+
+CREATE TABLE IF NOT EXISTS `request` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `processed` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+REPLACE INTO `request` VALUES
+(1 ,'2021-11-11 00:49:50',0),
+(2 ,'2021-11-12 00:49:50',0),
+(3 ,'2021-11-13 00:49:50',0),
+(4 ,'2021-11-14 00:49:50',0),
+(5 ,'2021-11-15 00:49:50',0),
+(6 ,'2021-11-16 00:49:50',0),
+(7 ,'2021-11-17 00:49:50',0),
+(8 ,'2021-11-18 00:49:50',0),
+(9 ,'2021-11-19 00:49:50',0),
+(10,'2021-11-20 00:49:50',0),
+(11,'2021-11-21 00:49:50',0),
+(12,'2021-11-22 00:49:50',0),
+(13,'2021-11-23 00:49:50',0),
+(14,'2021-11-24 00:49:50',0),
+(15,'2021-11-25 00:49:50',0),
+(16,'2021-11-26 00:49:50',0),
+(17,'2021-11-27 00:49:50',0),
+(18,'2021-11-28 00:49:50',0),
+(19,'2021-11-29 00:49:50',0),
+(20,'2021-11-30 00:49:50',0);
+
+GRANT ALL PRIVILEGES ON sample.* TO 'dev'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
